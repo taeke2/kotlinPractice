@@ -3,7 +3,8 @@ package com.example.kotlinpractice
 import java.util.*
 
 fun main() {
-
+    nullcheck()
+    ignoreNulls(str = "abcde")
 }
 
 // ** 함수
@@ -160,6 +161,48 @@ fun forAndWhile () {
 
     for((index, name) in students.withIndex()){ // index와 value값을 같이하고 싶을 때
         println("${index + 1}번째 학생 : ${name}")
+    }
+}
+
+// ===================================================================================================
+
+// ** Nullable / NonNull
+// kotlin의 가장 큰 장점
+fun nullcheck() {
+    // NPE : Null Pointer Exception
+
+    var name = "joyce"
+
+    //  '?' >> Nullable Type
+    var nullName: String? = null    // null을 넣고 싶으면 ?를 넣어주면 된다
+
+    var nameInUpperCase = name.uppercase()
+
+    var nullNameInUpperCase = nullName?.uppercase() // nullName이 null이 아니면 uppercase()를 적용하고 null이면 이 자체를 null로 반환한다.
+
+    // '?:' >> 엘비스 연산자
+    val lastName: String? = null
+    val fullName = name + " " + (lastName?: "NO lastName")
+
+    println(fullName)
+
+
+
+}
+
+// !! >> null일 리가 없어서 그냥 하면돼 라고 알려줌
+// 확실하게 null이지 않은 이상 웬만하면 안쓰는게 좋다.
+fun ignoreNulls(str: String?){
+    val mNotNull: String = str!!
+    val upper = mNotNull.uppercase()
+    println("upper : ${upper}")
+
+    // let function
+    // 리시버 객체를 람다식 내부로 옮겨서 실행하는 구문
+    val email: String?= "joycehongXXXX@nana.vom"    // Nullable인 email 변수
+    // email이 null이 아니면 let 함수 내부를 실행한다.
+    email?.let{
+        println("my email is ${email}")
     }
 }
 
