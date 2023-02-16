@@ -1,7 +1,9 @@
 package com.example.kotlinpractice
 
+import java.util.*
+
 fun main() {
-    checkNum(80)
+
 }
 
 // ** 함수
@@ -117,5 +119,79 @@ fun array() {
     val arrayList2 = arrayListOf<Int>()
     arrayList2.add(10)
     arrayList2.add(20)
-
 }
+
+// ===================================================================================================
+
+// ** 반복문 for / while
+
+fun forAndWhile () {
+
+    val students = arrayListOf("joyce", "james", "jenny", "jennifer")
+
+    for( name in students){
+        println("${name}")
+    }
+
+    var sum: Int = 0
+    for(i in 1..10){    // 1부터 10까지 반복해라
+        sum += i
+    }
+    println(sum)
+
+    sum = 0
+    for(i in 10 downTo 1){  // 10부터 1까지 (역으로는 downTo)
+        sum += i
+    }
+    println(sum)
+
+    sum = 0
+    for(i in 1 until 100) { // until 은 뒤에를 포함하지 않는다 (1~99)
+        sum+= i
+        println(i)
+    }
+    println(sum)
+
+    var index = 0
+    while(index < 10){  // while
+        println("current index : ${index}")
+        index++
+    }
+
+    for((index, name) in students.withIndex()){ // index와 value값을 같이하고 싶을 때
+        println("${index + 1}번째 학생 : ${name}")
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
