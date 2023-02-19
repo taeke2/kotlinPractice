@@ -128,7 +128,7 @@ fun array() {
 
 fun forAndWhile () {
 
-    val students = arrayListOf("joyce", "james", "jenny", "jennifer")
+    val students = arrayListOf("taeki", "james", "jenny", "jennifer")
 
     for( name in students){
         println("${name}")
@@ -171,7 +171,7 @@ fun forAndWhile () {
 fun nullcheck() {
     // NPE : Null Pointer Exception
 
-    var name = "joyce"
+    var name = "taeki"
 
     //  '?' >> Nullable Type
     var nullName: String? = null    // null을 넣고 싶으면 ?를 넣어주면 된다
@@ -199,12 +199,14 @@ fun ignoreNulls(str: String?){
 
     // let function
     // 리시버 객체를 람다식 내부로 옮겨서 실행하는 구문
-    val email: String?= "joycehongXXXX@nana.vom"    // Nullable인 email 변수
+    val email: String?= "taekiheoXXXX@nana.vom"    // Nullable인 email 변수
     // email이 null이 아니면 let 함수 내부를 실행한다.
     email?.let{
-        println("my email is ${email}")
+        println("my email is ${email}") // email 대신에 it 넣어도 가능
     }
 }
+
+
 
 
 
