@@ -83,7 +83,7 @@ fun checkNum(score: Int){
     // 점수에 따른 (범위가 있는)
     when (score){
         in 90..100 -> println("You are genius")
-        in 80 ..90 -> println("not bad")
+        in 80..90 -> println("not bad")
         else -> println("okay") // 여기서는 else 생략 가능
     }
 }
@@ -94,12 +94,11 @@ fun checkNum(score: Int){
 // 뭔가를 뽀짝뽀짝 해서 값을 만들어내면 Expression
 // 위 점수에서 처럼 결과가 값이 아닌 다른 형태로 나오면 Statement 라고 함
 // 코틀린에서 모든 function은 Expression이다. 아무것도 안적힌 것도 Unit 타입을 반환하기 때문
-// 자바는 조건문이 Statement도 있지만 코틀린은 아니다.
 
 // ===================================================================================================
 
 // ** Array and List
-// Array
+// Array : 기본적으로 정해져 있는 사이즈가 있다. 메모리에 할당이 되어서 나와서 처음에 크기를 지정해야한다.
 // List >> List & MutableList
 // 1. List : 읽기 전용이라 수정 못함
 // 2. MutableList : arrayList 생각하면된다. 수정가능
